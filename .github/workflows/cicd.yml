@@ -1,15 +1,16 @@
-name: my-CICD-actions
+name: My First Workflow
 
-on: push
+on:
+  push:
+    branches: [ "main" ] # Trigger the workflow on pushes to the main branch
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
-
     steps:
-       - name: iniyan.nalangilli@straive.com 
-        run: echo "Hello, world!"
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    
-
+    - name: iniyan.nalangilli@straive.com 
+      run: echo "Hello, world!"
